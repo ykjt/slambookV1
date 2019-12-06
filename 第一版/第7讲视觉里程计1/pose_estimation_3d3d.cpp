@@ -38,13 +38,14 @@ void bundleAdjustment(
     Mat& R, Mat& t
 );
 
-// g2o edge
+// g2o edge  一元边
 class EdgeProjectXYZRGBDPoseOnly : public g2o::BaseUnaryEdge<3, Eigen::Vector3d, g2o::VertexSE3Expmap>
 {
 public:
     EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
     EdgeProjectXYZRGBDPoseOnly( const Eigen::Vector3d& point ) : _point(point) {}
 
+    //误差函数
     virtual void computeError()
     {
         const g2o::VertexSE3Expmap* pose = static_cast<const g2o::VertexSE3Expmap*> ( _vertices[0] );
@@ -52,6 +53,7 @@ public:
         _error = _measurement - pose->estimate().map( _point );
     }
 
+    //误差对优化变量的导数   此处的雅克比和书上的不太一样， 书中求雅克比的时候是平移在前旋转在后，在G2o中刚好相反
     virtual void linearizeOplus()
     {
         g2o::VertexSE3Expmap* pose = static_cast<g2o::VertexSE3Expmap *>(_vertices[0]);
@@ -111,6 +113,7 @@ int main ( int argc, char** argv )
     Mat K = ( Mat_<double> ( 3,3 ) << 520.9, 0, 325.1, 0, 521.0, 249.7, 0, 0, 1 );
     vector<Point3f> pts1, pts2;
 
+    //将匹配到的二维点转换为三维点
     for ( DMatch m:matches )
     {
         ushort d1 = depth1.ptr<unsigned short> ( int ( keypoints_1[m.queryIdx].pt.y ) ) [ int ( keypoints_1[m.queryIdx].pt.x ) ];
@@ -126,7 +129,7 @@ int main ( int argc, char** argv )
     }
 
     cout<<"3d-3d pairs: "<<pts1.size() <<endl;
-    Mat R, t;
+    Mat R, t;//计算3D - 3D
     pose_estimation_3d3d ( pts1, pts2, R, t );
     cout<<"ICP via SVD results: "<<endl;
     cout<<"R = "<<R<<endl;
@@ -136,6 +139,7 @@ int main ( int argc, char** argv )
 
     cout<<"calling bundle adjustment"<<endl;
 
+    //使用优化的方法直接计算出R t
     bundleAdjustment( pts1, pts2, R, t );
 
     // verify p1 = R*p2 + t
@@ -209,22 +213,24 @@ Point2d pixel2cam ( const Point2d& p, const Mat& K )
                ( p.y - K.at<double> ( 1,2 ) ) / K.at<double> ( 1,1 )
            );
 }
-
+//T pts1 pts2
 void pose_estimation_3d3d (
     const vector<Point3f>& pts1,
     const vector<Point3f>& pts2,
     Mat& R, Mat& t
 )
 {
+    //1. p1 p2 求质心坐标
     Point3f p1, p2;     // center of mass
     int N = pts1.size();
-    for ( int i=0; i<N; i++ )
+    for ( int i=0; i<N; i++ )//先把所有的坐标累加
     {
         p1 += pts1[i];
         p2 += pts2[i];
-    }
+    }//然后除以总数 得到质心坐标
     p1 = Point3f( Vec3f(p1) /  N);
     p2 = Point3f( Vec3f(p2) / N);
+    //2. 计算每个点的去质心坐标   原坐标减去质心 得到 去质心坐标
     vector<Point3f>     q1 ( N ), q2 ( N ); // remove the center
     for ( int i=0; i<N; i++ )
     {
@@ -232,7 +238,7 @@ void pose_estimation_3d3d (
         q2[i] = pts2[i] - p2;
     }
 
-    // compute q1*q2^T
+    //3. compute q1*q2^T
     Eigen::Matrix3d W = Eigen::Matrix3d::Zero();
     for ( int i=0; i<N; i++ )
     {
@@ -240,7 +246,7 @@ void pose_estimation_3d3d (
     }
     cout<<"W="<<W<<endl;
 
-    // SVD on W
+    //4. SVD on W
     Eigen::JacobiSVD<Eigen::Matrix3d> svd ( W, Eigen::ComputeFullU|Eigen::ComputeFullV );
     Eigen::Matrix3d U = svd.matrixU();
     Eigen::Matrix3d V = svd.matrixV();
@@ -271,7 +277,7 @@ void pose_estimation_3d3d (
 void bundleAdjustment (
     const vector< Point3f >& pts1,
     const vector< Point3f >& pts2,
-    Mat& R, Mat& t )
+    Mat& R, Mat& t )//这里并没有使用传入的 R t
 {
     // 初始化g2o
     typedef g2o::BlockSolver< g2o::BlockSolverTraits<6,3> > Block;  // pose维度为 6, landmark 维度为 3
@@ -281,13 +287,13 @@ void bundleAdjustment (
     g2o::SparseOptimizer optimizer;
     optimizer.setAlgorithm( solver );
 
-    // vertex
+    // vertex  //优化变量就是顶点.
     g2o::VertexSE3Expmap* pose = new g2o::VertexSE3Expmap(); // camera pose
     pose->setId(0);
-    pose->setEstimate( g2o::SE3Quat(
+    pose->setEstimate( g2o::SE3Quat( //这里并没有使用传入的 R t 作为初始值。
         Eigen::Matrix3d::Identity(),
         Eigen::Vector3d( 0,0,0 )
-    ) );
+    ) );//设置估计值 旋转为单位矩阵 平移为 0
     optimizer.addVertex( pose );
 
     // edges
@@ -295,6 +301,7 @@ void bundleAdjustment (
     vector<EdgeProjectXYZRGBDPoseOnly*> edges;
     for ( size_t i=0; i<pts1.size(); i++ )
     {
+        //这里是一元边，几元边和这个边连接的顶点的个数是相对应的，这里就连接一个顶点所以是一元边。上面的雅克比矩阵的_jacobianOplusXi _jacobianOplusXj如果是有一个顶点就写_jacobianOplusXi这个（误差函数对该顶点的导数）
         EdgeProjectXYZRGBDPoseOnly* edge = new EdgeProjectXYZRGBDPoseOnly(
             Eigen::Vector3d(pts2[i].x, pts2[i].y, pts2[i].z) );
         edge->setId( index );
@@ -307,10 +314,11 @@ void bundleAdjustment (
         edges.push_back(edge);
     }
 
+    //开始优化
     chrono::steady_clock::time_point t1 = chrono::steady_clock::now();
     optimizer.setVerbose( true );
     optimizer.initializeOptimization();
-    optimizer.optimize(10);
+    optimizer.optimize(10);//优化次数
     chrono::steady_clock::time_point t2 = chrono::steady_clock::now();
     chrono::duration<double> time_used = chrono::duration_cast<chrono::duration<double>>(t2-t1);
     cout<<"optimization costs time: "<<time_used.count()<<" seconds."<<endl;

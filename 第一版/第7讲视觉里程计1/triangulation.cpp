@@ -32,14 +32,14 @@ Point2f pixel2cam( const Point2d& p, const Mat& K );
 
 int main ( int argc, char** argv )
 {
-    if ( argc != 3 )
-    {
-        cout<<"usage: triangulation img1 img2"<<endl;
-        return 1;
-    }
+//    if ( argc != 3 )
+//    {
+//        cout<<"usage: triangulation img1 img2"<<endl;
+//        return 1;
+//    }
     //-- 读取图像
-    Mat img_1 = imread ( argv[1], CV_LOAD_IMAGE_COLOR );
-    Mat img_2 = imread ( argv[2], CV_LOAD_IMAGE_COLOR );
+    Mat img_1 = imread ( "../1.png", CV_LOAD_IMAGE_COLOR );
+    Mat img_2 = imread ( "../2.png", CV_LOAD_IMAGE_COLOR );
 
     vector<KeyPoint> keypoints_1, keypoints_2;
     vector<DMatch> matches;
@@ -57,19 +57,24 @@ int main ( int argc, char** argv )
     //-- 验证三角化点与特征点的重投影关系
     Mat K = ( Mat_<double> ( 3,3 ) << 520.9, 0, 325.1, 0, 521.0, 249.7, 0, 0, 1 );
     for ( int i=0; i<matches.size(); i++ )
-    {
+    {   
+        ///这是比较三维点投影在第一帧上面，
+        //图片1中的归一化坐标
         Point2d pt1_cam = pixel2cam( keypoints_1[ matches[i].queryIdx ].pt, K );
-        Point2d pt1_cam_3d(
+        //三角化的三维坐标除以第三维，转换到 归一化坐标
+        Point2d pt1_cam_3d(//维点投影在第一帧上面，所以没有旋转变换
             points[i].x/points[i].z, 
             points[i].y/points[i].z 
-        );
-        
+        );        
         cout<<"point in the first camera frame: "<<pt1_cam<<endl;
         cout<<"point projected from 3D "<<pt1_cam_3d<<", d="<<points[i].z<<endl;
         
-        // 第二个图
+        /// 将三维点转换到 第二帧的归一化平面 和 第二个图图比较
+        //第二帧的归一化平面的坐标
         Point2f pt2_cam = pixel2cam( keypoints_2[ matches[i].trainIdx ].pt, K );
+        //将三维点旋转到第二帧相机坐标系下
         Mat pt2_trans = R*( Mat_<double>(3,1) << points[i].x, points[i].y, points[i].z ) + t;
+        //除以Z  ，得到归一化平面的坐标
         pt2_trans /= pt2_trans.at<double>(2,0);
         cout<<"point in the second camera frame: "<<pt2_cam<<endl;
         cout<<"point reprojected from second frame: "<<pt2_trans.t()<<endl;
@@ -199,7 +204,9 @@ void triangulation (
     }
     
     Mat pts_4d;
+    //传入归一化坐标
     cv::triangulatePoints( T1, T2, pts_1, pts_2, pts_4d );
+    cout<<"列数 对应多少个点，一列就是一个点 "<<pts_4d.cols <<"      =====================             行数是四维，第0123行"<<pts_4d.rows<<endl;
     
     // 转换成非齐次坐标
     for ( int i=0; i<pts_4d.cols; i++ )
@@ -214,7 +221,7 @@ void triangulation (
         points.push_back( p );
     }
 }
-
+//传入像素坐标，输出归一化坐标系的点 的 x y
 Point2f pixel2cam ( const Point2d& p, const Mat& K )
 {
     return Point2f

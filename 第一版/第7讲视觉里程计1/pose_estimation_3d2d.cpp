@@ -39,6 +39,11 @@ int main ( int argc, char** argv )
         cout<<"usage: pose_estimation_3d2d img1 img2 depth1 depth2"<<endl;
         return 1;
     }
+    /**
+     * 1.读入2张二维图像，并进行特征匹配
+     * 2.从图1中将匹配的二维点取出来，根据深度图读取深度信息，包装为3D 点。同时将第二章图片中对应的匹配取出来
+     * 3.构建好了3D 点 和2D点
+     * */
     //-- 读取图像
     Mat img_1 = imread ( argv[1], CV_LOAD_IMAGE_COLOR );
     Mat img_2 = imread ( argv[2], CV_LOAD_IMAGE_COLOR );
@@ -66,6 +71,7 @@ int main ( int argc, char** argv )
 
     cout<<"3d-2d pairs: "<<pts_3d.size() <<endl;
 
+    //调用opencv轮子计算 R t
     Mat r, t;
     solvePnP ( pts_3d, pts_2d, K, Mat(), r, t, false ); // 调用OpenCV 的 PnP 求解，可选择EPNP，DLS等方法
     Mat R;
@@ -76,6 +82,7 @@ int main ( int argc, char** argv )
 
     cout<<"calling bundle adjustment"<<endl;
 
+    //使用BA进行位姿优化
     bundleAdjustment ( pts_3d, pts_2d, K, R, t );
 }
 
