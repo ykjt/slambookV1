@@ -15,11 +15,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="40968609-ce39-4580-a3c6-e3a9cbbef1e4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pose_estimation_3d2d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimation_3d2d.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pose_estimation_3d3d.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/pose_estimation_3d3d.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/triangulation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/triangulation.cpp" afterDir="false" />
-    </list>
+    <list default="true" id="40968609-ce39-4580-a3c6-e3a9cbbef1e4" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -145,7 +141,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/桌面/深蓝第六期作业/第五次作业/第四题G-N实现BA" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../第8讲视觉里程计2/LKFlow" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -213,6 +209,7 @@
       <workItem from="1575553887041" duration="1622000" />
       <workItem from="1575598172287" duration="6909000" />
       <workItem from="1575628729832" duration="1174000" />
+      <workItem from="1575631127996" duration="33000" />
     </task>
     <task id="LOCAL-00001" summary="提交第七章">
       <created>1575619805716</created>
@@ -225,12 +222,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28984000" />
+    <option name="totallyTimeSpent" value="29017000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="-11" width="1857" height="1092" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18151632" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18372993" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
