@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/yk/桌面/slambook-master/ch10/g2o_custombundle/common/flags/command_args.cpp
+command_args.h
+/home/yk/桌面/slambook-master/ch10/g2o_custombundle/common/flags/command_args.h
+cstdlib
+-
+cstring
+-
+fstream
+-
+algorithm
+-
+functional
+-
+
+/home/yk/桌面/slambook-master/ch10/g2o_custombundle/common/flags/command_args.h
+string
+-
+vector
+-
+iostream
+-
+sstream
+-
+

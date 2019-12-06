@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="directMethod" targetName="direct_semidense" />
+      <config projectName="directMethod" targetName="direct_sparse" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11e0df13-70e7-48fe-91f3-094ac89d38cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../LKFlow/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/.idea/LKFlow.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/associate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/associate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/CXX.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/CMakeFiles/useLK.dir/useLK.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/useLK" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/cmake-build-debug/useLK.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth/1305031453.374112.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth/1305031453.404816.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth/1305031453.436941.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth/1305031453.473352.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth/1305031453.505218.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth/1305031453.538301.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth/1305031453.574074.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth/1305031453.605314.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/depth/1305031453.636951.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/groundtruth.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb/1305031453.359684.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb/1305031453.391690.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb/1305031453.423683.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb/1305031453.459685.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb/1305031453.491698.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb/1305031453.523684.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb/1305031453.559753.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb/1305031453.591640.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/rgb/1305031453.627706.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../LKFlow/useLK.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../data/data.tar.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/directMethod.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/associate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/associate.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cmake_modules/FindG2O.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth/1305031453.374112.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth/1305031453.404816.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth/1305031453.436941.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth/1305031453.473352.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth/1305031453.505218.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth/1305031453.538301.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth/1305031453.574074.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth/1305031453.605314.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/depth/1305031453.636951.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/direct_semidense.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/direct_sparse.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/error_LM.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/groundtruth.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb/1305031453.359684.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb/1305031453.391690.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb/1305031453.423683.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb/1305031453.459685.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb/1305031453.491698.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb/1305031453.523684.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb/1305031453.559753.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb/1305031453.591640.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rgb/1305031453.627706.png" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/direct_sparse.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3688">
+              <caret line="243" column="36" selection-start-line="243" selection-start-column="36" selection-end-line="243" selection-end-column="36" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <element signature="e#899#1160#0" />
+                <element signature="e#4567#5088#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/direct_semidense.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="187" selection-start-line="187" selection-end-line="187" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/direct_sparse.cpp" />
+        <option value="$PROJECT_DIR$/direct_semidense.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="4">
+    <option name="x" value="129" />
+    <option name="y" value="24" />
+    <option name="width" value="1684" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="directMethod" type="b2602c69:ProjectViewProjectNode" />
+              <item name="directMethod" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.direct_sparse">
+    <configuration name="direct_semidense" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="directMethod" TARGET_NAME="direct_semidense" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="directMethod" RUN_TARGET_NAME="direct_semidense">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="direct_sparse" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="./" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="directMethod" TARGET_NAME="direct_sparse" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="directMethod" RUN_TARGET_NAME="direct_sparse">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.direct_semidense" />
+      <item itemvalue="Application.direct_sparse" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11e0df13-70e7-48fe-91f3-094ac89d38cd" name="Default Changelist" comment="" />
+      <created>1562486870505</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562486870505</updated>
+      <workItem from="1562486872027" duration="525000" />
+      <workItem from="1565347749637" duration="7000" />
+      <workItem from="1575632433364" duration="5252000" />
+    </task>
+    <task id="LOCAL-00001" summary="第八章">
+      <created>1575637615179</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1575637615179</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5784000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="129" y="24" width="1684" height="1056" extended-state="4" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.200489" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30280173" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Messages" order="8" weight="0.39655173" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28148147" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="CMake" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第八章" />
+    <option name="LAST_COMMIT_MESSAGE" value="第八章" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/error_LM.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/local/include/opencv2/imgcodecs.hpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="66" column="7" selection-start-line="66" selection-start-column="7" selection-end-line="66" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/g2o/types/slam3d/se3quat.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/g2o/types/sba/types_six_dof_expmap.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="84" column="67" selection-start-line="84" selection-start-column="67" selection-end-line="84" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/include/g2o/core/optimizable_graph.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="436" column="13" selection-start-line="436" selection-start-column="13" selection-end-line="436" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/direct_sparse.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3688">
+          <caret line="243" column="36" selection-start-line="243" selection-start-column="36" selection-end-line="243" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#899#1160#0" />
+            <element signature="e#4567#5088#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/direct_semidense.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="187" selection-start-line="187" selection-end-line="187" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

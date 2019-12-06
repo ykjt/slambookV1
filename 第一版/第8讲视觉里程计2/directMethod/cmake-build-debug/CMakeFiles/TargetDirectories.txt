@@ -1,0 +1,4 @@
+/home/yk/gitcode/第一版/第8讲视觉里程计2/directMethod/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/yk/gitcode/第一版/第8讲视觉里程计2/directMethod/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/yk/gitcode/第一版/第8讲视觉里程计2/directMethod/cmake-build-debug/CMakeFiles/direct_sparse.dir
+/home/yk/gitcode/第一版/第8讲视觉里程计2/directMethod/cmake-build-debug/CMakeFiles/direct_semidense.dir
