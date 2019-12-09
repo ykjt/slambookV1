@@ -310,10 +310,10 @@ bool poseEstimationDirect ( const vector< Measurement >& measurements, cv::Mat* 
         optimizer.addEdge ( edge );//向优化器中添加边
     }
     cout<<"edges in graph: "<<optimizer.edges().size() <<endl;
-    //开始优化
+    optimizer.save("./result_before.g2o");
     optimizer.initializeOptimization();
-    //设置优化迭代次数
     optimizer.optimize ( 30 );
+    optimizer.save("./result_after.g2o");
 
     //取出优化顶点的估计值
     Tcw = pose->estimate();

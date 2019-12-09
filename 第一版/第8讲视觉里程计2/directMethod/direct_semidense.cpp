@@ -297,8 +297,10 @@ bool poseEstimationDirect ( const vector< Measurement >& measurements, cv::Mat* 
         optimizer.addEdge ( edge );
     }
     cout<<"edges in graph: "<<optimizer.edges().size() <<endl;
+    optimizer.save("./result_before.g2o");
     optimizer.initializeOptimization();
     optimizer.optimize ( 30 );
+    optimizer.save("./result_after.g2o");
     Tcw = pose->estimate();
 }
 
